@@ -141,14 +141,10 @@ body {
   gap: 1rem;
   position: relative;
 }
-.to-do-list__item::before {
-  content: "";
+.to-do-list__group {
   display: block;
-  position: absolute;
   width: 5rem;
   height: 5px;
-  left: 0;
-  top: -0.2rem;
   border-radius: 0.5rem;
   background-color: #586ba4;
   -webkit-border-radius: 0.5rem;

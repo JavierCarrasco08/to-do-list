@@ -142,21 +142,17 @@ body {
     align-items: center;
     gap: 1rem;
     position: relative;
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 5rem;
-      height: 5px;
-      left: 0;
-      top: -0.2rem;
-      border-radius: 0.5rem;
-      background-color: $primary-color-blue-optional;
-      -webkit-border-radius: 0.5rem;
-      -moz-border-radius: 0.5rem;
-      -ms-border-radius: 0.5rem;
-      -o-border-radius: 0.5rem;
-    }
+  }
+  &__group {
+    display: block;
+    width: 5rem;
+    height: 5px;
+    border-radius: 0.5rem;
+    background-color: $primary-color-blue-optional;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
   }
   &__description {
     font-size: 1.5rem;

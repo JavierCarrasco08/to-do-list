@@ -16,15 +16,21 @@
       rel="shortcut icon"
       href="./src/assets/images/to-do-icon.png"
       type="image/x-icon" />
-    <script src="./src/javascript/main.js"></script>
+    <script src="./src/javascript/main.js" type="module" defer></script>
   </head>
   <body>
     <header class="hero">
       <section class="hero__entrada">
         <section class="hero__rating">
-          <button class="hero__fast"></button>
-          <button class="hero__intermediate"></button>
-          <button class="hero__optional"></button>
+          <input type="button" data-group="importan" class="hero__fast group" />
+          <input
+            type="button"
+            data-group="intermediate"
+            class="hero__intermediate group" />
+          <input
+            type="button"
+            data-group="Optional"
+            class="hero__optional group" />
         </section>
         <section class="hero__form">
           <input
@@ -40,35 +46,31 @@
     </header>
     <main class="to-do-list">
       <ul class="to-do-list__container">
-        <li class="to-do-list__item">
-          <label class="to-do-list__check">
-            <input type="checkbox" />
-            <div class="to-do-list__checkmark"></div>
-          </label>
-          <p class="to-do-list__description">Trabajar</p>
-          <button class="to-do-list__trash">
-            <img src="./src/assets/svg/trash.svg" alt="trash" />
-          </button>
+        <li class="to-do-list__li">
+          <div class="to-do-list__group"></div>
+          <section class="to-do-list__item">
+            <label class="to-do-list__check">
+              <input type="checkbox" />
+              <div class="to-do-list__checkmark"></div>
+            </label>
+            <p class="to-do-list__description">Trabajar</p>
+            <button class="to-do-list__trash">
+              <img src="./src/assets/svg/trash.svg" alt="trash" />
+            </button>
+          </section>
         </li>
-        <li class="to-do-list__item">
-          <label class="to-do-list__check">
-            <input type="checkbox" />
-            <div class="to-do-list__checkmark"></div>
-          </label>
-          <p class="to-do-list__description">Acomodar mi cuarto</p>
-          <button class="to-do-list__trash">
-            <img src="./src/assets/svg/trash.svg" alt="trash" />
-          </button>
-        </li>
-        <li class="to-do-list__item">
-          <label class="to-do-list__check">
-            <input type="checkbox" />
-            <div class="to-do-list__checkmark"></div>
-          </label>
-          <p class="to-do-list__description">Hacer Tarea</p>
-          <button class="to-do-list__trash">
-            <img src="./src/assets/svg/trash.svg" alt="trash" />
-          </button>
+        <li class="to-do-list__li">
+          <div class="to-do-list__group"></div>
+          <section class="to-do-list__item">
+            <label class="to-do-list__check">
+              <input type="checkbox" />
+              <div class="to-do-list__checkmark"></div>
+            </label>
+            <p class="to-do-list__description">Jugar</p>
+            <button class="to-do-list__trash">
+              <img src="./src/assets/svg/trash.svg" alt="trash" />
+            </button>
+          </section>
         </li>
       </ul>
       <footer class="to-do-list__footer">

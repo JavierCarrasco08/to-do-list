@@ -1,5 +1,107 @@
 html {
   font-family: "Nunito", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  max-width: 1500px;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #46494c;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  width: 100%;
+  height: 8rem;
+  flex-grow: 0;
+}
+.hero__entrada {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  gap: 0.5rem;
+}
+.hero__rating {
+  width: 70%;
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+}
+.hero__fast, .hero__intermediate, .hero__optional {
+  width: 3rem;
+  height: 0.5rem;
+  border-radius: 1rem;
+  background-color: red;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  cursor: pointer;
+}
+.hero__fast {
+  background-color: #f45b69;
+}
+.hero__intermediate {
+  background-color: #f5dd90;
+}
+.hero__optional {
+  background-color: #586ba4;
+}
+.hero__form {
+  width: 70%;
+  display: flex;
+  gap: 0.7rem;
+}
+.hero__input {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Nunito", sans-serif;
+  width: 70%;
+  padding: 0.7rem 1rem;
+  outline: none;
+  color: #f4f3ee;
+  border-radius: 1rem;
+  border: 0.05rem solid #f4f3ee;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+.hero__add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #33ca7f;
+  color: #f4f3ee;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.2rem 2.5rem;
+  border-radius: 1rem;
+  font-family: "Nunito", sans-serif;
+  cursor: pointer;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+.hero__add span {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.to-do-list {
+  flex-grow: 1;
+}
+
+.foo {
+  flex-grow: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

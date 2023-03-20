@@ -1,3 +1,105 @@
+@use "variables" as *;
 html {
   font-family: "Nunito", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+body {
+  width: 100%;
+  max-width: 1500px;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: $primary-color-main;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  width: 100%;
+  height: 8rem;
+  flex-grow: 0;
+  &__entrada {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap: 0.5rem;
+  }
+  &__rating {
+    width: 70%;
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+  }
+  &__fast,
+  &__intermediate,
+  &__optional {
+    width: 3rem;
+    height: 0.5rem;
+    border-radius: 1rem;
+    background-color: red;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    cursor: pointer;
+  }
+  &__fast {
+    background-color: $primary-color-red-important;
+  }
+  &__intermediate {
+    background-color: $primary-color-yellow-optional;
+  }
+  &__optional {
+    background-color: $primary-color-blue-optional;
+  }
+  &__form {
+    width: 70%;
+    display: flex;
+    gap: 0.7rem;
+  }
+  &__input {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Nunito", sans-serif;
+    width: 70%;
+    padding: 0.7rem 1rem;
+    outline: none;
+    color: $color-text;
+    border-radius: 1rem;
+    border: 0.05rem solid $color-text;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+  }
+  &__add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary-color-button-add;
+    color: $color-text;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.2rem 2.5rem;
+    border-radius: 1rem;
+    font-family: "Nunito", sans-serif;
+    cursor: pointer;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    span {
+      font-size: inherit;
+      font-weight: inherit;
+    }
+  }
+}
+.to-do-list {
+  flex-grow: 1;
+}
+.foo {
+  flex-grow: 0;
 }

@@ -17,7 +17,7 @@ body {
 
 .hero {
   width: 100%;
-  height: 8rem;
+  height: 7rem;
   flex-grow: 0;
 }
 .hero__entrada {
@@ -36,24 +36,38 @@ body {
   gap: 1rem;
 }
 .hero__fast, .hero__intermediate, .hero__optional {
+  border: 0.05rem solid #46494c;
   width: 3rem;
-  height: 0.5rem;
+  height: 0.6rem;
   border-radius: 1rem;
-  background-color: red;
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
   -ms-border-radius: 1rem;
   -o-border-radius: 1rem;
   cursor: pointer;
+  transition: box-shadow 0.5s ease-in, width 0.5s linear;
+  -webkit-transition: box-shadow 0.5s ease-in, width 0.5s linear;
+  -moz-transition: box-shadow 0.5s ease-in, width 0.5s linear;
+  -ms-transition: box-shadow 0.5s ease-in, width 0.5s linear;
+  -o-transition: box-shadow 0.5s ease-in, width 0.5s linear;
 }
 .hero__fast {
   background-color: #f45b69;
 }
+.hero__fast:hover {
+  box-shadow: 0px 0px 5px 5px #f45b69;
+}
 .hero__intermediate {
   background-color: #f5dd90;
 }
+.hero__intermediate:hover {
+  box-shadow: 0px 0px 5px 5px #f5dd90;
+}
 .hero__optional {
   background-color: #586ba4;
+}
+.hero__optional:hover {
+  box-shadow: 0px 0px 5px 5px #586ba4;
 }
 .hero__form {
   width: 70%;
@@ -86,6 +100,7 @@ body {
   padding: 0.2rem 2.5rem;
   border-radius: 1rem;
   font-family: "Nunito", sans-serif;
+  border: 0.15rem solid #46494c;
   cursor: pointer;
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
@@ -103,7 +118,6 @@ body {
 }
 .hero__add:hover {
   box-shadow: 0px 0px 10px 10px #33ca7f;
-  border: 0.05rem solid #f4f3ee;
 }
 
 .to-do-list {
@@ -127,11 +141,30 @@ body {
 .to-do-list__container {
   width: 100%;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 .to-do-list__item {
   display: flex;
   align-items: center;
   gap: 1rem;
+  position: relative;
+}
+.to-do-list__item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 5rem;
+  height: 5px;
+  left: 0;
+  top: -0.2rem;
+  border-radius: 0.5rem;
+  background-color: #586ba4;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
 }
 .to-do-list__description {
   font-size: 1.5rem;
@@ -182,12 +215,48 @@ body {
   flex-grow: 0;
   display: flex;
   gap: 1rem;
-  font-weight: 600;
+  font-weight: 300;
 }
 
 .foo {
   color: #f4f3ee;
   flex-grow: 0;
+  padding: 0.5rem 0;
+}
+.foo__navbar {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  display: flex;
+  gap: 2rem;
+}
+.foo__a {
+  font-size: 1rem;
+  font-weight: 600;
+  position: relative;
+}
+.foo__a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0%;
+  height: 5px;
+  left: 0;
+  bottom: -0.2rem;
+  border-radius: 0.5rem;
+  background-color: #586ba4;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  transition: width 0.5s ease-out;
+  -webkit-transition: width 1s ease-out;
+  -moz-transition: width 1s ease-out;
+  -ms-transition: width 1s ease-out;
+  -o-transition: width 1s ease-out;
+}
+.foo__a:hover::before {
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

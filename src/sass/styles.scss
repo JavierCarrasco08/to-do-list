@@ -12,6 +12,7 @@ body {
   background-color: $primary-color-main;
   display: flex;
   flex-direction: column;
+  gap: 2rem;
 }
 
 .hero {
@@ -69,7 +70,7 @@ body {
     outline: none;
     color: $color-text;
     border-radius: 1rem;
-    border: 0.05rem solid $color-text;
+    border: 0.15rem solid $color-text;
     -webkit-border-radius: 1rem;
     -moz-border-radius: 1rem;
     -ms-border-radius: 1rem;
@@ -95,11 +96,101 @@ body {
       font-size: inherit;
       font-weight: inherit;
     }
+    &:hover {
+      box-shadow: 0px 0px 10px 10px $primary-color-button-add;
+      border: 0.05rem solid $color-text;
+    }
+    transition: box-shadow 0.5s ease-in, width 0.5s linear;
+    -webkit-transition: box-shadow 0.5s ease-in, width 0.5s linear;
+    -moz-transition: box-shadow 0.5s ease-in, width 0.5s linear;
+    -ms-transition: box-shadow 0.5s ease-in, width 0.5s linear;
+    -o-transition: box-shadow 0.5s ease-in, width 0.5s linear;
   }
 }
 .to-do-list {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-text;
+  color: $primary-color-main;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  &__container {
+    width: 100%;
+    flex-grow: 1;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  &__description {
+    font-size: 1.5rem;
+    width: 90%;
+  }
+  &__trash {
+    cursor: pointer;
+    align-self: end;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.2rem;
+    border-radius: 0.2rem;
+    background-color: $primary-color-red-important;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    -ms-border-radius: 0.2rem;
+    -o-border-radius: 0.2rem;
+  }
+  &__check {
+    display: block;
+    height: 1.5rem;
+    width: 1.5rem;
+    cursor: pointer;
+    position: relative;
+  }
+
+  &__check input {
+    position: absolute;
+    transform: scale(0);
+  }
+
+  &__check input:checked ~ &__checkmark {
+    transform: rotate(45deg);
+    height: 1.2rem;
+    width: 0.6rem;
+    border-color: $primary-color-button-add;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-radius: 0;
+  }
+
+  &__check &__checkmark {
+    display: block;
+    width: inherit;
+    height: inherit;
+    border: 2px solid $primary-color-button-add;
+    border-radius: 4px;
+    transition: all 0.3s;
+  }
+  &__footer {
+    flex-grow: 0;
+    display: flex;
+    gap: 1rem;
+    font-weight: 600;
+  }
 }
 .foo {
+  color: $color-text;
   flex-grow: 0;
 }

@@ -13,11 +13,12 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin: auto;
 }
 
 .hero {
   width: 100%;
-  height: 7rem;
+  height: 6rem;
   flex-grow: 0;
 }
 .hero__entrada {
@@ -54,31 +55,23 @@ body {
 .hero__fast {
   background-color: #f45b69;
 }
-.hero__fast:hover {
-  box-shadow: 0px 0px 5px 5px #f45b69;
-}
 .hero__intermediate {
   background-color: #f5dd90;
-}
-.hero__intermediate:hover {
-  box-shadow: 0px 0px 5px 5px #f5dd90;
 }
 .hero__optional {
   background-color: #586ba4;
 }
-.hero__optional:hover {
-  box-shadow: 0px 0px 5px 5px #586ba4;
-}
 .hero__form {
   width: 70%;
   display: flex;
+  flex-wrap: wrap;
   gap: 0.7rem;
 }
 .hero__input {
   font-size: 1rem;
   font-weight: 600;
   font-family: "Nunito", sans-serif;
-  width: 70%;
+  width: 50%;
   padding: 0.7rem 1rem;
   outline: none;
   color: #f4f3ee;
@@ -116,9 +109,6 @@ body {
   font-size: inherit;
   font-weight: inherit;
 }
-.hero__add:hover {
-  box-shadow: 0px 0px 10px 10px #33ca7f;
-}
 
 .to-do-list {
   flex-grow: 1;
@@ -143,7 +133,7 @@ body {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 .to-do-list__item {
   display: flex;
@@ -217,6 +207,9 @@ body {
   gap: 1rem;
   font-weight: 300;
 }
+.to-do-list__task {
+  font-weight: 600;
+}
 
 .foo {
   color: #f4f3ee;
@@ -255,8 +248,70 @@ body {
   -ms-transition: width 1s ease-out;
   -o-transition: width 1s ease-out;
 }
-.foo__a:hover::before {
-  width: 100%;
+
+@media screen and (min-width: 700px) {
+  .hero__add:hover {
+    box-shadow: 0px 0px 10px 10px #33ca7f;
+  }
+  .hero__fast:hover {
+    box-shadow: 0px 0px 5px 5px #f45b69;
+  }
+  .hero__intermediate:hover {
+    box-shadow: 0px 0px 5px 5px #f5dd90;
+  }
+  .hero__optional:hover {
+    box-shadow: 0px 0px 5px 5px #586ba4;
+  }
+  .foo__a:hover::before {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .hero {
+    height: 8rem;
+  }
+  .hero__form {
+    justify-content: center;
+  }
+  .hero__input {
+    width: 100%;
+  }
+  .hero__add {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .hero__fast, .hero__intermediate, .hero__optional {
+    height: 0.9rem;
+    width: 4rem;
+  }
+  .hero__input {
+    font-size: 1.5rem;
+    width: 70%;
+  }
+  .hero__add {
+    font-size: 1.2rem;
+  }
+  .to-do-list__description {
+    font-size: 1.7rem;
+  }
+  .to-do-list__footer {
+    font-size: 1.5rem;
+  }
+  .to-do-list__check {
+    height: 1.7rem;
+    width: 1.7rem;
+  }
+  .to-do-list__check .to-do-list__checkmark {
+    border: 4px solid #33ca7f;
+  }
+  .to-do-list__check input:checked ~ .to-do-list__checkmark {
+    height: 1.7rem;
+    width: 0.9rem;
+  }
+  .foo__a {
+    font-size: 1.2rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -13,11 +13,12 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin: auto;
 }
 
 .hero {
   width: 100%;
-  height: 7rem;
+  height: 6rem;
   flex-grow: 0;
   &__entrada {
     width: 100%;
@@ -54,32 +55,24 @@ body {
   }
   &__fast {
     background-color: $primary-color-red-important;
-    &:hover {
-      box-shadow: 0px 0px 5px 5px $primary-color-red-important;
-    }
   }
   &__intermediate {
     background-color: $primary-color-yellow-optional;
-    &:hover {
-      box-shadow: 0px 0px 5px 5px $primary-color-yellow-optional;
-    }
   }
   &__optional {
     background-color: $primary-color-blue-optional;
-    &:hover {
-      box-shadow: 0px 0px 5px 5px $primary-color-blue-optional;
-    }
   }
   &__form {
     width: 70%;
     display: flex;
+    flex-wrap: wrap;
     gap: 0.7rem;
   }
   &__input {
     font-size: 1rem;
     font-weight: 600;
     font-family: "Nunito", sans-serif;
-    width: 70%;
+    width: 50%;
     padding: 0.7rem 1rem;
     outline: none;
     color: $color-text;
@@ -110,9 +103,6 @@ body {
     span {
       font-size: inherit;
       font-weight: inherit;
-    }
-    &:hover {
-      box-shadow: 0px 0px 10px 10px $primary-color-button-add;
     }
     transition: box-shadow 0.5s ease-in, width 0.5s linear;
     -webkit-transition: box-shadow 0.5s ease-in, width 0.5s linear;
@@ -145,7 +135,7 @@ body {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
   }
   &__item {
     display: flex;
@@ -222,6 +212,9 @@ body {
     gap: 1rem;
     font-weight: 300;
   }
+  &__task {
+    font-weight: 600;
+  }
 }
 
 .foo {
@@ -261,8 +254,92 @@ body {
       -ms-transition: width 1s ease-out;
       -o-transition: width 1s ease-out;
     }
-    &:hover::before {
+  }
+}
+@media screen and (min-width: "700px") {
+  .hero {
+    &__add {
+      &:hover {
+        box-shadow: 0px 0px 10px 10px $primary-color-button-add;
+      }
+    }
+    &__fast {
+      &:hover {
+        box-shadow: 0px 0px 5px 5px $primary-color-red-important;
+      }
+    }
+    &__intermediate {
+      &:hover {
+        box-shadow: 0px 0px 5px 5px $primary-color-yellow-optional;
+      }
+    }
+    &__optional {
+      &:hover {
+        box-shadow: 0px 0px 5px 5px $primary-color-blue-optional;
+      }
+    }
+  }
+  .foo {
+    &__a {
+      &:hover::before {
+        width: 100%;
+      }
+    }
+  }
+}
+@media screen and (max-width: "400px") {
+  .hero {
+    height: 8rem;
+    &__form {
+      justify-content: center;
+    }
+    &__input {
       width: 100%;
+    }
+    &__add {
+      width: 70%;
+    }
+  }
+}
+
+@media screen and (min-width: "1400px") {
+  .hero {
+    &__fast,
+    &__intermediate,
+    &__optional {
+      height: 0.9rem;
+      width: 4rem;
+    }
+    &__input {
+      font-size: 1.5rem;
+      width: 70%;
+    }
+    &__add {
+      font-size: 1.2rem;
+    }
+  }
+  .to-do-list {
+    &__description {
+      font-size: 1.7rem;
+    }
+    &__footer {
+      font-size: 1.5rem;
+    }
+    &__check {
+      height: 1.7rem;
+      width: 1.7rem;
+    }
+    &__check &__checkmark {
+      border: 4px solid $primary-color-button-add;
+    }
+    &__check input:checked ~ &__checkmark {
+      height: 1.7rem;
+      width: 0.9rem;
+    }
+  }
+  .foo {
+    &__a {
+      font-size: 1.2rem;
     }
   }
 }

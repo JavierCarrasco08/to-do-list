@@ -9,8 +9,8 @@ export function count(parent) {
   let intermediate = $CHILD_ITEMS.filter(
     (e) => e.dataset.option === "intermediate"
   );
-  $IMPORTAN.textContent = `F: ${importan.length}`;
-  $INTERMEDIATE.textContent = `I: ${intermediate.length}`;
-  $OPTIONAL.textContent = `O: ${optional.length}`;
+  $IMPORTAN.textContent = `Important: ${importan.length}`;
+  $INTERMEDIATE.textContent = `Intermediate: ${intermediate.length}`;
+  $OPTIONAL.textContent = `Optional: ${optional.length}`;
   $TASK_NUM.textContent = `Task: ${$CHILD_ITEMS.length}`;
 }

@@ -148,7 +148,6 @@ body {
     width: 5rem;
     height: 5px;
     border-radius: 0.5rem;
-    background-color: $primary-color-blue-optional;
     -webkit-border-radius: 0.5rem;
     -moz-border-radius: 0.5rem;
     -ms-border-radius: 0.5rem;
@@ -283,7 +282,14 @@ body {
     }
   }
 }
-@media screen and (max-width: "400px") {
+@media screen and (max-width: "530px") {
+  .to-do-list {
+    &__description {
+      font-size: 1.2rem;
+    }
+  }
+}
+@media screen and (max-width: "430px") {
   .hero {
     height: 8rem;
     &__form {
@@ -294,6 +300,11 @@ body {
     }
     &__add {
       width: 70%;
+    }
+  }
+  .to-do-list {
+    &__description {
+      font-size: 1rem;
     }
   }
 }
